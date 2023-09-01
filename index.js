@@ -3,10 +3,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 //add the required files with the classes.
-const Triangle = require("../lib/triangle.js");
-const Square = require("../lib/square.js");
-const Circle = require("../lib/circle.js");
-const Logo = require("../lib/logo.js");
+const Triangle = require("./lib/triangle.js");
+const Square = require("./lib/square.js");
+const Circle = require("./lib/circle.js");
+const Logo = require("./lib/logo.js");
 
 // initialize app by asking questions to the user.
 function init() {
@@ -43,7 +43,21 @@ function init() {
       },
     ])
     .then((data) => {
-      console.log(data);
+        console.log(data);
+        var completeShape;
+        if(data.shape === "circle"){
+            completeShape = new Circle(data.shapeColor);
+        }
+        else if (data.shape === "square") {
+            completeShape = new Square(data.shapeColor);
+        }
+        else {
+            completeShape = new Triangle(data.shapeColor);
+        }
+        var logo = new Logo(data.text, data.textColor, completeShape);
+        console.log(logo.shape.createShape());
+        console.log(logo.text);
+        console.log(logo.color);
     });
   }
   
