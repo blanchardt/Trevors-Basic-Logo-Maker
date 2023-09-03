@@ -18,7 +18,10 @@ function init() {
         name: 'text',
         validate: function(text) {
             //went to https://stackoverflow.com/questions/16048148/regex-to-check-if-whitespace-present to figure out how to check for spaces
-            //in regualr expressions.
+            //in regualr expressions.  Also credited in the README.
+            //user1869870, jfriend00, kennebec, Andrew Clark, Kenneth, Dinoop Unnikrishnan, icanc, &amp; Iwo Kucharski. (2013, April 
+            //  16). Regex to check if whitespace present?. Stack Overflow. 
+            //  https://stackoverflow.com/questions/16048148/regex-to-check-if-whitespace-present 
             var space = /\s/;
             if (text.length <= 3 && !space.test(text)) {
               return true;
