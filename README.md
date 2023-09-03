@@ -5,7 +5,7 @@ Creates an SVG file to be used as a basic logo.
 ## Description  
 Allows the user to create a logo after giving information about the text, text color, shape, and shape color.  The logo will be saved as an SVG file.  
 Walkthrough Video:  
-
+https://drive.google.com/file/d/1E1Y_TwQuWozmNwbTATMR1KECwiaceu37/view?usp=sharing  
 Example of responses given:  
 ![Providing input to create a green square with blue text that says SVG over the shape.](./assets/images/example-logo-prompt-answers.png)  
 
